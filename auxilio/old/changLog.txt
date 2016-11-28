@@ -1,0 +1,10 @@
+Change log between auxilio.html and auxilio.php
+enlever la fct test xampp et online et offline et remplacerle style de connectionStatus
+
+#html	l 5 		change link to favicone add '/Applications/XAMPP/xamppfiles/htdocs/auxilio/'
+#html	l 21 		change link to stylsheet add '/Applications/XAMPP/xamppfiles/htdocs/auxilio/'
+#html	l 37-42 	correct path for images
+#php	l 169-190	remove testXAMPP(), online() and offline() add backToHtml()
+#php	l 215		remove testXAMPP();  add backToHtml();
+
+not gona keep loging chnanges any more just going to separate the code

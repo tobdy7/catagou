@@ -1,0 +1,130 @@
+/*
+* @project	NoPainNoGain
+* @author	UserOne0One
+* @version 	1.01
+*/
+/*
+	RESET BY:
+	http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+/* ===== RESET ===== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after 
+{content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+/* ===== CUSTOM RESET ===== */
+object{outline:none; display:block; overflow:hidden} /* force redraw on IE8, fix outline/scroll bug on Firefox 3.6, remove unnecessary margin (copied from swffit) */
+textarea{overflow:auto} /* fix IE */
+iframe{border:0}
+/* fix line-height [https://gist.github.com/413930] */
+sup, sub{line-height:0; font-size:.75em; position:relative; vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+/* ========================= GENERAL TAGS ======================== */
+html{font-family: "Goudy Bookletter 1911", sans-serif; overflow-y:auto; min-width:1000px}
+body{background-color:#000; color:#000; font-size:12px; line-height:1.5em}
+h1, h2, h3, h4, h5, h6{margin:1.5em 0 .833em; font-weight:bold; line-height:1em}
+h1, .h1{font-size:2em}
+h2, .h2{font-size:1.6em}
+h3, .h3{font-size:1.4em}
+h4, .h4{font-size:1.2em}
+h5, .h5{font-size:1.1em}
+h6, .h6{font-size:1em}
+p{margin:1em 0}
+small{font-size:.833em}
+em, i{font-style:italic}
+strong, b{font-weight:bold}
+code, pre{font-family:monospace}
+a{text-decoration:underline}
+a:hover, a:focus{text-decoration:none}
+a:hover, a:active{outline:none}
+hr{background-color:#fff; border:1px solid #fff; border-top:1px solid #aaa; clear:both; margin:2em 0}
+blockquote{padding:0.2em 1em 0.2em 2em; border-left:3px solid #eee}
+footer{position:absolute; bottom:10px; width:100%;}
+footer p{width:20%; text-align:center; color:grey; margin-left:auto !important; margin-right:auto !important; padding-top:5px; border-top:3px solid #777}
+
+/* ======================= GENERIC CLASSES ======================= */
+/* ===== FRAMEWORK ===== */
+/* -- image -- */
+/* image replacement (borrowed from HTML5 boilerplate) */
+.ir{text-indent:-999em; display:block; overflow:hidden; text-align:left; direction:ltr}
+/* -- display -- */
+.hidden{display:none !important}
+.hidden, .invisible{visibility:hidden !important}
+.show{display:block !important; visibility:visible !important}
+/* -- centering -- */
+/* vertical centering technique [http://www.jakpsatweb.cz/css/css-vertical-center-solution.html] */
+.vcenter{/* height of .vcenter element is required */ top:50%; overflow:hidden; position:relative; display:table; }
+.vcenter .outer{top:50%; display:table-cell; vertical-align:middle;}
+.vcenter .inner{*position:relative; *top:-50%}
+.hcenter{min-width:0px; display: table; margin-left:auto !important; margin-right:auto !important}
+/* -- text helpers -- */
+.tcenter{text-align:center}
+.tleft{text-align:left}
+.tright{text-align:right}
+.tupper{text-transform:uppercase}
+.tlower{text-transform:lowercase}
+.tnormal{text-transform:none}
+.tmiddle{text-align:middle}
+.tbottom{text-align:bottom}
+/* -- interaction helpers -- */
+.clickable, .btn{cursor:pointer; }
+.clickable.disabled, .btn.disabled{cursor:default !important}
+/* --- font-styles --- */
+.b{font-weight:bold}
+.em{font-style:italic}
+.big{font-size:1.166em}
+.small{font-size:.833em}
+.del{text-decoration:line-through}
+.red{color:red}
+
+/* ===== PROJECT SPECIFIC ===== */
+/* --- container --- */
+#container{position:absolute; top:10px; bottom:10px; left:10px; right:10px; border-radius:10px; box-shadow:0px 0px 10px 4px white; background-color:#eee;}
+/* --- header --- */
+header{position:fixed; left:0px; top:0px; height:140px; width:100%; padding:30px; border-bottom:5px solid #333; background-color:#eee;}
+/* --- article --- */
+.article{position:absolute; top:205px; bottom:60px; left:220px; right:200px; padding: 20px; display:inline-block;}
+
+.half_left{left:0px; width: calc(50% - 5px); height:100%; float:left; border:solid #000; border-width:2px 0px 2px 5px;}
+.half_right{right:0px; width: calc(50% - 5px); height:100%; float:right; border:solid #000; border-width:2px 5px 2px 0px;}
+.bigDiv{width:100%; height:100%; overflow-y:auto;}
+.smallDiv{width:198px; height:140px; padding:5px 5px;}
+
+.border{width:100%; height:100%; border:solid #000; border-width:2px 5px 2px 5px;}
+
+.radius_left{border-radius: 10px 0px 0px 10px;}
+.radius_right{border-radius: 0px 10px 10px 0px;}
+.radius_all{border-radius:10px;}
+
+.mainText{height: 1em; font-size:3em; font-weight:bold; padding:10px;}
+
+.selectable:hover{background-color:#ccc; cursor:pointer; }
+
+.smallhlist{margin-left:30px; margin-bottom:30px; float:left;}
+
+/* ============================ DEBUG ============================ */
+.flash{background:yellow;}

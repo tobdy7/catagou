@@ -1,0 +1,239 @@
+
+
+/**
+* auxilio 4.1
+* @author UserOne0One
+* @version 0.1
+*/
+/* ============================ RESET ============================ */
+/* ===== Eric Meyer Reset ===== */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* ===== CUSTOM RESET ===== */
+object{outline:none; display:block; overflow:hidden} /* force redraw on IE8, fix outline/scroll bug on Firefox 3.6, remove unnecessary margin (copied from swffit) */
+textarea{overflow:auto} /* fix IE */
+iframe{border:0}
+/* fix line-height [https://gist.github.com/413930] */
+sup, sub{line-height:0; font-size:.75em; position:relative; vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+/* ========================= GENERAL TAGS ======================== */
+html{font-family:Arial, Helvetica, sans-serif; overflow-y:scroll; min-width:1000px}
+body{background-color:#fff; color:#444; font-size:12px; line-height:1.5em}
+h1, h2, h3, h4, h5, h6{margin:1.5em 0 .833em; font-weight:bold; line-height:1em}
+h1, .h1{font-size:2em}
+h2, .h2{font-size:1.6em}
+h3, .h3{font-size:1.4em}
+h4, .h4{font-size:1.2em}
+h5, .h5{font-size:1.1em}
+h6, .h6{font-size:1em}
+p{margin:1em 0}
+small{font-size:.833em}
+em, i{font-style:italic}
+strong, b{font-weight:bold}
+code, pre{font-family:monospace}
+a{text-decoration:underline}
+a:hover, a:focus{text-decoration:none}
+a:hover, a:active{outline:none}
+hr{background-color:#fff; border:1px solid #fff; border-top:1px solid #aaa; clear:both; margin:2em 0}
+blockquote{padding:0.2em 1em 0.2em 2em; border-left:3px solid #eee}
+footer{position:absolute; bottom:10px; width:100%;}
+footer p{width:90%; text-align:center; color:grey; margin-left:auto !important; margin-right:auto !important; padding-top:5px; border-top:3px solid #777}
+header, nav{width:100%; background:#0074D9; height:20px;}/* background:#0074D9; background:RGBA(0, 116, 219, 0.7);*/
+header{position:absolute; top:0px; height:50px;}
+nav{position:absolute; top:50px; height:40px;}
+
+/* ======================= GENERIC CLASSES ======================= */
+/* ===== FRAMEWORK ===== */
+/* clearfix hack [http://j.mp/bestclearfix] */
+.clearfix:before, .clearfix:after, .clearfix > .lastcol:after, .ffluid:after, br.cb{display:block; height:0 !important; line-height:0; overflow:hidden; visibility:hidden}
+.clearfix:before, .clearfix:after{content:"."}
+.clearfix:after{clear:both}
+.clearfix, .ffluid{*zoom:1}
+/* Nicole Sullivan zoom-fix hack [http://bit.ly/gpXFlK] */
+.fcolholder:after, .fcolholder .lastcol:after, .ffluid:after{font-size:xx-large; content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x "}
+.fcolholder .lastcol{display:table-cell; float:none; width:auto !important; *display:block; *zoom:1; _position:relative; _left:-3px; _margin-right:-3px}
+/* -- columns -- */
+.col{float:left}
+.col-1_1{float:none; width:100%}
+.col-1_2, .col-2_4, .col-3_6{width:50%}
+.col-1_3, .col-2_6{width:33.33333%}
+.col-2_3, .col-4_6{width:66.66666%}
+.col-1_4{width:25%}
+.col-3_4{width:75%}
+.col-1_5{width:20%}
+.col-2_5{width:40%}
+.col-3_5{width:60%}
+.col-4_5{width:80%}
+.col-1_6{width:16.66667%}
+.col-5_6{width:83.33333%}
+/* -- image -- */
+/* image replacement (borrowed from HTML5 boilerplate) */
+.ir{text-indent:-999em; display:block; overflow:hidden; text-align:left; direction:ltr}
+/* -- floats -- */
+.fl{float:left; _margin-right:-3px}
+.fr{float:right; _margin-left:-3px}
+.ffluid{display:table-cell; *display:block; width:auto}
+.cr{clear:right}
+.cl{clear:left}
+.cb{clear:both}
+/* -- display -- */
+.hidden{display:none !important}
+.hidden, .invisible{visibility:hidden !important}
+.show{display:block !important; visibility:visible !important}
+/* -- centering -- */
+/* vertical centering technique [http://www.jakpsatweb.cz/css/css-vertical-center-solution.html] */
+.vcenter{/* height of .vcenter element is required */ overflow:hidden; *position:relative; display:table; *display:block}
+.vcenter .outer{display:table-cell; vertical-align:middle; width:100%; *position:absolute; *top:50%}
+.vcenter .inner{*position:relative; *top:-50%}
+.hcenter{/* width is required */ margin-left:auto !important; margin-right:auto !important}
+/* -- text helpers -- */
+.tcenter{text-align:center}
+.tleft{text-align:left}
+.tright{text-align:right}
+.tupper{text-transform:uppercase}
+.tlower{text-transform:lowercase}
+.tnormal{text-transform:none}
+//.ttop{text-align:top}
+.tmiddle{text-align:middle}
+.tbottom{text-align:bottom}
+/* -- interaction helpers -- */
+.clickable, .btn{cursor:pointer}
+.clickable.disabled, .btn.disabled{cursor:default !important}
+
+/* ===== PROJECT SPECIFIC ===== */
+/* --- font-styles --- */
+.b{font-weight:bold}
+.em{font-style:italic}
+.big{font-size:1.166em}
+.small{font-size:.833em}
+.del{text-decoration:line-through}
+.red{color:red}
+.green{color:green}
+/* --- lists --- */
+.nav, .nav > li{padding:0; margin:0}
+.hlnav > li{float:left; margin-right:1em}
+.hrnav > li{float:right; margin-left:1em}
+.simpleList{padding-left:2em; margin:1em 0}
+ol.simpleList{list-style:decimal}
+ul.simpleList{list-style:disc}
+.simpleList > li{margin:.5em 0}
+.simpleList > li ul{margin:0 0 1em}
+.simpleList > dt{margin:1em 0 .2em}
+.simpleList > dd{margin:.5em 0; padding-left:2em}
+
+.navLink{color:#222; float:left; border-right:3px solid #555; width:90px;padding: 10px; cursor:pointer; text-align:center; overflow-y:auto;}
+.navLink:nth-of-type(1){border-left:3px solid #555;}
+.navLink:hover{background:#0064C9; color:#000; font-size:1.1em;}
+.navLink-selected{background:#0064C9; color:#000;}
+
+.imgLogo{position:absolute; left:-70px; top:-20px; height:60px; width:60px; z-index:1}
+
+.container{position:absolute; top:90px; bottom:50px; left:0px; right:0px; margin:30px 130px 30px 130px; border-right:4px solid #0074D9; border-left:4px solid #0074D9; padding:20px 60px; min-width:630px; overflow-y:auto;}
+
+.divSite{position:relative; height:100px; width:170px; margin-left:60px; margin-bottom:20px; padding-left:10px; z-index:1; float:left;}
+.divSite-style0{border-left:10px solid #001f3f;}
+.divSite-style1{border-left:10px solid rgb(192,57,43);}
+.divOverlay{width: 100%; height: 100%; position: absolute; top: 0; background:rgba(190,190,190,0.3); cursor:pointer;}
+.divOverlay:hover{background:rgba(120,120,120,0.4);}
+.divAdd{position:absolute; top: 20px; right: 0px; padding:5px; border-radius:5px 0px 0px 5px; font-weight:bold; font-size:3em; background:rgba(190,190,190,0.3); cursor:pointer;}
+.divAdd:hover{background:rgba(120,120,120,0.4);}
+.divEdit{position:absolute; bottom:10px; right:10px; border:1px solid #444; border-radius:2px; padding:3px 9px; z-index:2; font-size:2em; background:rgba(120,120,120,0.8); color:#000; cursor:pointer;}
+.divEdit:hover{background:rgba(110,110,110,0.9);}
+.buttonSmall{font-size:20px; font-weight:bold}
+
+.divFormLink{position:absolute; top:15px; right:70px; width:140px; border:3px solid #001f3f; border-radius:10px; padding:10px; padding-right:17px; background:white; z-index:10}
+.buttonFormLink{position:absolute}
+
+.articleForm{margin-bottom:30px;}
+.formInput{width:90%; border:1px solid #BDC3C7; border-radius:4px; padding:12px 10px 9px 10px; text-align:left; color:#001f3f; font-size:1.2em; font-family:Bliss; font-weight:bold;}
+.formInput:focus{border-color:#0084E9; border-top:1px solid #0054B9; border-radius:4px; color:#001020;}/* padding:9px 10px 5px 10px;*/
+.formRadio{display:none;}
+.radioLabel:before{content: "";position:relative; top:10px; left:1px; display: inline-block; width: 20px; height: 32px; background-color: #aaa; box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8); border-radius:3px;  cursor:pointer;}
+.formRadio:checked + .radioLabel-style1:before{content: ""; display: inline-block; width: 20px; height: 32px; background:rgb(0, 160, 0); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 2px 4px #aaa;}
+.formRadio:checked + .radioLabel-style2:before{content: ""; display: inline-block; width: 20px; height: 32px; background:rgb(196, 147, 29); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 2px 4px #aaa;}
+.formRadio:checked + .radioLabel-style3:before{content: ""; display: inline-block; width: 20px; height: 32px; background:rgb(192, 57, 43); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 2px 4px #aaa;}
+.radioLabel-style1:before{background:rgb(0, 160, 0); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 3px 8px #aaa;}
+.radioLabel-style2:before{background:rgb(196, 147, 29); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 3px 8px #aaa;}
+.radioLabel-style3:before{background:rgb(192, 57, 43); box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8), inset 0px 0px 3px 8px #aaa;}
+.divTags{height:25px; background-color:#DDD;}
+
+.displayList{overflow-y:auto;}
+.noteEntity{margin-bottom:3px; padding:6px 0px 4px 23px; font-size:1.2em; font-family:Bliss; font-weight:bold;}
+.noteEntity:hover{background:rgba(210,210,210,0.3)}
+.supr{position: relative; top:-5px; float:right; padding:6px 8px 2px 8px; cursor:pointer;}
+.supr:hover{background:rgba(205,205,205,0.3)}
+.noteEntity-style0{border-left:6px solid #001f3f;}
+.noteEntity-style1{border-left:6px solid rgb(0, 160, 0);}
+.noteEntity-style2{border-left:6px solid rgb(196, 147, 29);}
+.noteEntity-style3{border-left:6px solid rgb(192, 57, 43);}
+
+.divSynchro{position:relative; top:-4px; float:right; clear:left; margin-right:40px; cursor:pointer; font-size:2em; font-weight:bold;}
+.clock{position:relative; top:-9px; float:right; clear:left; margin-right:140px; padding:6px 12px 2px 12px; border:2px solid #444; border-radius:4px; box-shadow: inset 0px 0px 4px 0px #444; font: bold 2em Anonymous Pro, sans-serif; cursor:default}
+.connectedStatus-style0{position:relative; top:-34px; float:right; clear:right; margin-right:50px; width:20px; height:16px; border-radius:8px; background:green; box-shadow:inset 0px 1px 2px #191, inset 1px 2px 2px #595;}
+.connectedStatus-style1{position:relative; top:-34px; float:right; clear:right; margin-right:50px; width:20px; height:16px; border-radius:8px; background:orange; box-shadow:inset 0px 1px 2px #ffb833, inset 1px 2px 2px #cc8500;}
+.connectedStatus-style2{position:relative; top:-34px; float:right; clear:right; margin-right:50px; width:20px; height:16px; border-radius:8px; background:red; box-shadow:inset 0px 1px 2px #911, inset 1px 2px 2px #955;}
+
+.tableStTa{width:90%; height:100%}
+.tableStTa th{border-right: 10px solid #fff; padding:10px; font-weight:Bold; font-size:2.5em; background:rgba(200,150,240,0.5);}
+.tableStTa td{border-right: 10px solid #fff; }/*background:rgba(150,150,240,0.5);*/
+.divTache{border-top: 5px solid #67f; border-bottom: 5px solid #fff; padding:3px; font-size:1.2em; font-weight:bold; background:rgba(140,150,240,0.3);}
+.checkboxStta{float:right; cursor: pointer;}
+.divTacheStyle0{background-color:rgba(0,255,0,0.4);}
+.divTacheStyle1{background-color:rgba(60,60,60,0.3);}
+.divTacheStyle2{background-color:rgba(240,100,100,0.4);}
+
+.articleSection{width: 100%;margin-bottom:20px; border-bottom:4px solid #0074D9; padding:30px;}
+
+#logo{position:relative; left:100px; top:30px; font-size:2em; font-weight:bold; max-width:200px;}
+#navMenu{position:relative; left:330px; font-size:1.7em; display:inline-block;}
+
+/* ============================ DEBUG ============================ */
+
+
+.flash{background:yellow;}

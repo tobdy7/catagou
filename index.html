@@ -1,0 +1,88 @@
+<!--
+/*
+* @project	home
+* @author	UserOne0One
+* @version 	1.0
+*/
+
+//file:///opt/lampp/htdocs/catagou/index.html
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+	<title>Index</title>
+	<meta name="description" content="This is a temporary redirecting page" />
+	<meta name="keywords" content="first, step, html" />
+	<link type="text/css" rel="stylesheet" href="stylsheet.css" />
+	<script type="text/javascript">
+		/*function doesConnectionExist() {
+			var xhr = new XMLHttpRequest();
+			var file = "http://localhost/catagou/zentralBank/NoPainNoGain.php?page=get";
+			var randomNum = Math.round(Math.random() * 10000);
+			
+			xhr.open('HEAD', file + "?rand=" + randomNum, true);
+			xhr.send();
+			
+			xhr.addEventListener("readystatechange", processRequest, false);
+			
+			function processRequest(e) {
+				if (xhr.readyState == 4) {
+					if (xhr.status >= 200 && xhr.status < 304) {
+						alert("connection exists!");
+					} else {
+						alert("connection doesn't exist!");
+					}
+				}
+			}
+		}
+		*/
+		
+		function testXAMPP() {
+			//window.location.reload(true);
+			
+			var img = document.createElement("img");
+			//var randomNum = Math.round(Math.random() * 10000);
+			img.src = "http://localhost/favicon.ico";
+			img.onload = function(){online();};
+			img.onerror = function(){offline();};
+			//document.body.appendChild(img);
+		}
+		function online(){
+			location.href = "http://localhost/catagou/auxilio";
+		}
+		function offline(){
+			alert("offline");
+			/*document.getElementById('connectedStatus').className = "connectedStatus-style2";
+			setCookie("xampp","offline",1);*/
+			
+		}
+		
+		function yep(){
+			testXAMPP();
+		}
+		function yap(){
+			window.location.reload(true);
+		}
+	</script>
+	<style>
+		
+	</style>
+  </head>
+  <body onLoad="yep()">
+	<div id="container">
+		<h1>XAMPP INSTANCE NOT FOUND</h1>
+		<button onClick="yap()">test connexion</button>
+	</div>
+	<footer>
+		<p>Copyright &copy; 2016 userOneOOne</p>
+	</footer>
+  </body>
+</html>
